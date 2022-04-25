@@ -11,6 +11,7 @@ print(len(user_info))    #3
 #SECTION Access/Change same as string
 
                                     #*Access
+
 user_info = { "Name" : "Pixels", "Location" : "Helwan", "Age": 19}
 
 print(user_info["Name"])    #Pixels
@@ -21,6 +22,7 @@ print(user_info.get("sdf")) #None
 if "Name" in user_info : print("HOLA")
 
                             #*Change & Add items items 
+                            
 user_info = { "Name" : "Pixels", "Location" : "Helwan"}
 
 user_info["Location"] = "University"

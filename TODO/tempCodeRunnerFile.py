@@ -1,0 +1,1 @@
+min(sample_dict)
