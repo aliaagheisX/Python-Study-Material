@@ -1,0 +1,26 @@
+#:kivy 2.1.0
+
+WidgetExample2:
+
+
+<WidgetExample2>:
+    cols : 3
+    Switch:
+        id: my_switch
+        active: True
+        size_hint: 0.4, 1
+    Slider:
+        id: my_slider
+        min:0
+        max:100
+        disabled: not my_switch.active
+    Label:
+        text: str(int(my_slider.value))
+        font_name: 'Fonts/DS-DIGIT.TTF'
+        font_size: 100
+        color: 1, 0.5, 0, 1
+
+
+
+
+

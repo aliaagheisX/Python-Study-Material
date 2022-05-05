@@ -1,0 +1,19 @@
+#:kivy 2.1.0
+
+MainLayout:
+<MainLayout@BoxLayout>:
+    orientation : 'vertical'
+    Label:
+        pos_hint: {'right': 1}
+        text: '0'
+        size_hint: None, 0.2
+        height: '10dp'
+    Tools:
+
+<Tools>:
+    Button:
+        text: '='
+        size_hint : 0.75, 0.2
+    Button:
+        text: '.'
+        size_hint : 0.25, 0.2

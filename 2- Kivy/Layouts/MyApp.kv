@@ -1,0 +1,88 @@
+#:kivy 1.0
+PagesExample:
+
+
+
+<PagesExample@PageLayout>:
+    StackExample:
+    GridExample:
+    AnchorExample:
+    BoxExample:
+
+
+
+
+
+
+
+
+#?New Way To inialize layout without make class in .py
+<ScrollExample@ScrollView>:
+    StackExample:
+        #! we should inialize size (width or height)
+        size_hint: 1, None
+        #* self.minimum_height automatically get height of content
+        height: self.minimum_height
+
+
+    
+<StackExample>:
+    #left-right top-bottom
+    #orientation: "rl-bt"
+    padding : "20dp"
+    spacing: "10dp", "10dp"
+
+<GridExample>:
+    #rows: 2
+    cols: 2
+    spacing: '10dp'
+    Button:
+        text: "A"
+        size_hint: 0.2, 1 #due to #?(C) col 
+    Button:
+        text: "B"
+    Button:
+        text: "C"
+        size_hint: 0.3, 1 #?(C) col 
+    Button:
+        text: "D"
+
+
+<AnchorExample>:
+    #right , left, center (default)
+    anchor_x:'center'
+    #top, bottom, center (default)
+    anchor_y:'top'
+    BoxLayout:
+        size_hint: 0.1,0.1
+        Button:
+            text: "A"
+        Button:
+            text: "B"
+    
+<BoxExample>:
+    #default orienatation : 'horizontal'
+    orientation : 'vertical'
+    Button:
+        text:'A'
+        size: '100dp', '30dp' #Nothing Change
+        size_hint: .5, .5
+        #x, center_x, right [PICK ONLY ONE]        
+        #y, center_y, top   [PICK ONLY ONE]   
+        pos_hint: {'center_x' : 0.5}
+    BoxLayout:   
+        orientation : 'horizontal'
+        spacing: "10dp"
+        Button:
+            text:'B1'
+        Button:
+            text:'B2'
+        Button:
+            text:'B3'
+    Button:
+        text:'C'
+        size_hint: None, 0.5
+        width: '100dp'  #width change only
+
+
+

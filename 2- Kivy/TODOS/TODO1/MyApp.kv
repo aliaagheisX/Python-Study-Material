@@ -1,0 +1,19 @@
+#:kivy 1.0
+
+MainLayout:
+
+<MainLayout@BoxLayout>
+    orientation : 'vertical'
+    NumberBox:
+    ScreenBox:
+        size_hint: 1,0.1
+
+<NumberBox>:
+    orientation : 'vertical'
+    padding: '80dp', '80dp'
+
+<ScreenBox@BoxLayout>:
+    Button:
+        text: "Go to Screen 1"
+    Button:
+        text: "Go to Screen 2"

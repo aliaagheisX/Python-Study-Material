@@ -1,0 +1,100 @@
+#:kivy 2.1.0
+
+ImageExample:
+
+
+<ImageExample@GridLayout>:
+    cols : 3
+    Image:
+        source: '../Images/Panda.png'
+    Image:
+        source: '../Images/Panda.png'
+        allow_stretch: True
+    Image:
+        source: '../Images/Panda.png'
+        allow_stretch: True
+        keep_ratio: False
+
+
+
+
+
+
+
+
+
+
+
+
+
+<WidgetExample3>:
+    cols : 2
+    TextInput:
+        text: "Foo"
+        background_color: 0.5, 0.5, 0.5, 1
+        on_text_validate: root.validateMe(self)
+        multiline: False
+    Label:
+        text: root.txt
+
+
+
+
+
+<WidgetExample2>:
+    cols : 3
+    Switch:
+        id: my_switch
+        active: True
+        size_hint: 0.4, 1
+    Slider:
+        id: my_slider
+        min:0
+        max:100
+        disabled: not my_switch.active
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: str(int(my_slider.value))
+            font_name: 'Fonts/DS-DIGIT.TTF'
+            font_size: 100
+            color: 1, 0.5, 0, 1
+        ProgressBar:
+            #! min = 0 (Always)
+            max: 100
+            value: my_slider.value
+
+
+
+
+
+
+
+
+
+
+
+<WidgetExample1>:
+    cols: 3
+    ToggleButton:
+        id: my_tgl
+        text: 'ON' if self.state == 'down' else 'OFF'
+        size_hint: 0.4, 1
+
+    Button:
+        text: 'Count'
+        font_name: 'Fonts/LBRITE.TTF'
+        on_press: root.onClickMe()
+        font_size: 30
+        disabled : False if my_tgl.state == 'down' else True
+    Label:
+        text: root.txt
+        font_name: 'Fonts/DS-DIGIT.TTF'
+        font_size: 100
+        color: 1, 0.5, 0, 1
+    
+
+
+
+
+
