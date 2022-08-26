@@ -1,0 +1,25 @@
+#:kivy 2.1.0
+
+WidgetExample2:
+
+
+<WidgetExample2@GridLayout>:
+    cols : 4
+    ToggleButton:
+        id : btn
+        
+        Image:
+            source: 'imgs/A.png'
+            opacity:  1 if btn.state == 'down' else 0
+
+
+<Cell@Widget>
+    ToggleButton:
+        id : btn
+        
+    Image:
+        id : im
+        source: 'imgs/A.png'
+        opacity:  1 if btn.state == 'down' else 0
+
+
